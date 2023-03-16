@@ -42,12 +42,12 @@
             </p>
         </div>
          <!-- How does quizTimer and chooseQuiz functions works?-->
-         <hr class="pb-1 bg-slate-200 mt-4">
+         <hr class="pb-1 bg-slate-300 my-8">
         <div class="mt-4">
-            <h3 class="font-semibold text-xl my-2"><span class="bg-red-200 px-3 font-medium mr-1 rounded ">How does quizTimer and chooseQuiz functions works?</span></h3>
+            <h3 class="font-semibold text-xl my-2"><span class="bg-red-200 px-3 font-medium mr-1 rounded">***How does quizTimer and chooseQuiz functions works?</span></h3>
             <span class="bg-blue-100 text-xl px-1 font-semibold rounded-sm">Answer:</span> <br>
             <div>
-                <span class="bg-orange-200 px-3 font-medium mr-1 rounded">quizTimer:</span>The work of quizTimer function handle time in the 'Time Consumed' section. if this function called by falsy value it will start time counting. on the other hand, this function is called by truthy value, it will pause the time. <br><span class="bg-orange-200 px-3 font-medium mr-1 rounded">chooseQuiz:</span> It check a global array called answers(id) that contains the user's answers to various quiz questions. and check whether an answer already exists for the current quiz question in the answers array. If an answer exists, it updates the answer with the new givenAns value. If not, it adds a new answer object to the answers array with the givenAns value. Then, the displayAnswers function is called to display the answers to the user on the webpage. 
+                <span class="bg-orange-200 px-3 font-medium mr-1 rounded">quizTimer:</span>The work of <span class="font-semibold">quizTimer</span> function handle time in the <span class="font-semibold">Time Consumed</span> section. if this function called by falsy value it will start a timer by calling <span class="font-semibold">setInterval()</span>. on the other hand, this function is called by truthy value, it will stop the timer by calling <span class="font-semibold">clearInterval()</span>.<br><span class="bg-orange-200 px-3 font-medium mr-1 rounded">chooseQuiz:</span>Inside the function, based on id property, the <span class="font-semibold">find()</span> method check whether an answer already exists in the <span class="font-semibold">answers</span> array to compare with the <span class="font-semibold">quizData</span> array. If an answer exists, it updates the <span class="font-semibold">answers</span> array using the <span class="font-semibold">splice()</span> method. If not, it push a new answer to the <span class="font-semibold">answers</span> array with the <span class="font-semibold">quizData[index]</span> (using the spread syntax) and <span class="font-semibold">givenAns</span> properties. Then, the <span class="font-semibold">displayAnswers</span> function is called to display the answers to the user on the webpage.
             </div>
         </div>
     </section>

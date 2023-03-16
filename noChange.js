@@ -2,7 +2,7 @@
 
 // Handle Timer
 
-// The work of quizTimer function handle time in the 'Time Consumed' section. if this function called by falsy value it will start time counting. on the other hand, this function is called by truthy value, it will pause the time.
+// The work of quizTimer function handle time in the Time Consumed section. if this function called by falsy value it will start a timer by calling setInterval(). on the other hand, this function is called by truthy value, it will stop the timer by calling clearInterval().
 const quizTimer = (dismiss) => {
   if (dismiss) {
     clearInterval(timer);
@@ -36,7 +36,6 @@ const displayQuizOptions = (quiz, i) => {
   let serial = 1;
   let generatedOptions = "";
   for (let option of quiz) {
-    console.log(option);
     generatedOptions += `<div
       class="border border-gray-200 rounded text-xs p-2 cursor-pointer"
       onclick="chooseQuiz('${i}', '${option}')">
@@ -47,9 +46,8 @@ const displayQuizOptions = (quiz, i) => {
   }
   return generatedOptions;
 };
-
 // select or choose quiz
-/* It check a global array called answers(id) that contains the user's answers to various quiz questions. and check whether an answer already exists for the current quiz question in the answers array. If an answer exists, it updates the answer with the new givenAns value. If not, it adds a new answer object to the answers array with the givenAns value. Then, the displayAnswers function is called to display the answers to the user on the webpage. */
+/* Inside the function, based on id property, the find() method check whether an answer already exists in the answers array to compare with the quizData array. If an answer exists, it updates the answers array using the splice() method. If not, it push a new answer to the answers array with the quizData[index] (using the spread syntax) and givenAns properties. Then, the displayAnswers function is called to display the answers to the user on the webpage. */
 
 const chooseQuiz = (index, givenAns) => {
   const isExist = answers.find((ans) => ans.id === quizData[index].id);
