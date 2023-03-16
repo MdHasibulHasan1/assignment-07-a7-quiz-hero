@@ -19,6 +19,7 @@
             <span class="bg-orange-200 font-medium px-3 mr-1 rounded">Filter:</span>The filter method is used to create a new array containing all elements that pass a test implemented by the provided function. It returns a new array that contains only the elements that fulfil the condition specified in the function. If no elements satisfy the condition, an empty array is returned. The original array is not modified. <br>
             <span class="bg-orange-200 px-3 font-medium mr-1 rounded">Find:</span>The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
         </div>
+        
         <!-- question 02 -->
         <div>
             <h3 class="font-semibold text-xl my-2"><span class="bg-red-300 px-3 font-medium mr-1 rounded ">Question 02: </span>Difference between local storage, session storage and cookies?</h3>
@@ -32,6 +33,7 @@
                 <span class="bg-orange-200 px-3 font-medium mr-1 rounded"> Scope:</span>Local storage and session storage are specific to the browser window or tab that created them. This means that data stored in local storage or session storage is not accessible to other browser windows or tabs. Cookies, on the other hand, can be accessed by any window or tab that shares the same domain.
             </div> 
         </div>
+        
         <!-- question 03 -->
         <div>
             <h3 class="font-semibold text-xl my-2"><span class="bg-red-300 px-3 font-medium mr-1 rounded ">Question 03: </span>What is event loop and how does it work?</h3>
@@ -39,7 +41,15 @@
             <p><span class="bg-orange-200 px-3 font-medium mr-1 rounded">Definition:</span>The event loop is a mechanism that allows JavaScript to perform asynchronous operations without blocking the main thread of execution. <br> <span class="bg-orange-200 px-3 font-medium mr-1 rounded">Works:</span>The event loop works by continuously monitoring  the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.
             </p>
         </div>
-         
+         <!-- How does quizTimer and chooseQuiz functions works?-->
+         <hr class="pb-1 bg-slate-200 mt-4">
+        <div class="mt-4">
+            <h3 class="font-semibold text-xl my-2"><span class="bg-red-200 px-3 font-medium mr-1 rounded ">How does quizTimer and chooseQuiz functions works?</span></h3>
+            <span class="bg-blue-100 text-xl px-1 font-semibold rounded-sm">Answer:</span> <br>
+            <div>
+                <span class="bg-orange-200 px-3 font-medium mr-1 rounded">quizTimer:</span>The work of quizTimer function handle time in the 'Time Consumed' section. if this function called by falsy value it will start time counting. on the other hand, this function is called by truthy value, it will pause the time. <br><span class="bg-orange-200 px-3 font-medium mr-1 rounded">chooseQuiz:</span> It check a global array called answers(id) that contains the user's answers to various quiz questions. and check whether an answer already exists for the current quiz question in the answers array. If an answer exists, it updates the answer with the new givenAns value. If not, it adds a new answer object to the answers array with the givenAns value. Then, the displayAnswers function is called to display the answers to the user on the webpage. 
+            </div>
+        </div>
     </section>
 
     <script src="./tailwind.config.js"></script>
