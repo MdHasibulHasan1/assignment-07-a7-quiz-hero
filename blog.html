@@ -13,7 +13,7 @@
         <!-- question 01 -->
         <h3 class="font-semibold text-xl my-2"><span class="bg-red-300 px-3 font-medium mr-1 rounded ">Question 01: </span>What’s the difference between map, foreach, filter and find?</h3>
         <div>
-            <span class="bg-blue-100 text-xl px-1 font-semibold rounded-sm">Answer:</span> <br>
+            <span class="bg-blue-100 text-xl px-1 font-semibold rounded-sm mb-1">Answer:</span> <br>
             <span class="bg-orange-200 px-3 font-medium mr-1 rounded ">Map:</span>The map method is used to create a new array by applying a function to each element of the original array. It returns a new array of the same length as the original array, where each element is the result of applying the function to the corresponding element in the original array. The original array is not modified. The map method is useful when you want to transform an array into another array of the same length. <br>
             <span class="bg-orange-200 font-medium px-3 mr-1 rounded">Foreach:</span>The forEach method is used to apply a provided function once for each element in an array. It doesn't return a new array. The main purpose of the forEach method is to iterate over an array and execute some code for each element in the array. <br>
             <span class="bg-orange-200 font-medium px-3 mr-1 rounded">Filter:</span>The filter method is used to create a new array containing all elements that pass a test implemented by the provided function. It returns a new array that contains only the elements that fulfil the condition specified in the function. If no elements satisfy the condition, an empty array is returned. The original array is not modified. <br>
@@ -32,7 +32,14 @@
                 <span class="bg-orange-200 px-3 font-medium mr-1 rounded"> Scope:</span>Local storage and session storage are specific to the browser window or tab that created them. This means that data stored in local storage or session storage is not accessible to other browser windows or tabs. Cookies, on the other hand, can be accessed by any window or tab that shares the same domain.
             </div> 
         </div>
-        
+        <!-- question 03 -->
+        <div>
+            <h3 class="font-semibold text-xl my-2"><span class="bg-red-300 px-3 font-medium mr-1 rounded ">Question 03: </span>What is event loop and how does it work?</h3>
+            <span class="bg-blue-100 text-xl px-1 font-semibold rounded-sm mb-1">Answer:</span> <br>
+            <p><span class="bg-orange-200 px-3 font-medium mr-1 rounded">Definition:</span>The event loop is a mechanism that allows JavaScript to perform asynchronous operations without blocking the main thread of execution. <br> <span class="bg-orange-200 px-3 font-medium mr-1 rounded">Works:</span>The event loop works by continuously monitoring  the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.
+            </p>
+        </div>
+         
     </section>
 
     <script src="./tailwind.config.js"></script>
